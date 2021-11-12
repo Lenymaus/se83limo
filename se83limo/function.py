@@ -4,16 +4,19 @@ from PIL import Image
 
 def imshow(X, resize=None):
     im = None
-    print("I try")
+    print("I try", type(X))
     try:
         X = np.asarray(X)
+        print(X)
     except (TypeError):
         pass
     try:
         im = Image.fromarray(X)
+        print("Im fromarray")
     except: print("Oops!  That was no valid array!")
     if im is not None:
         if isinstance(resize, tuple) and len(resize) == 2:
+            print("should show")
             im = im.resize(resize).show()
             return im
         else: 
