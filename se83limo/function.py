@@ -17,10 +17,10 @@ def imshow(X, resize=None):
     if im is not None:
         if isinstance(resize, tuple) and len(resize) == 2:
             print("should show")
-            im = im.resize(resize).show()
-            return im
+            #im = im.resize(resize).show()
+            return im.resize(resize)
         else: 
-            im.show()
+            #im.show()
             return im
     return im
     
