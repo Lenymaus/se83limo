@@ -13,10 +13,12 @@ def imshow(X, resize=None):
     except: print("Oops!  That was no valid array!")
     if im is not None:
         if isinstance(resize, tuple) and len(resize) == 2:
+            display(im.resize(resize))
+            #im.resize(resize).show()
             return im.resize(resize)
-            display(im)
         else: 
             display(im)
+            #im.show()
             return im
     return im
     
