@@ -9,7 +9,7 @@ def imshow(X, resize=None):
     except (TypeError):
         pass
     try:
-        im = Image.fromarray(X)
+        im = Image.fromarray(np.uint8(X))
     except: print("Oops!  That was no valid array!")
     if im is not None:
         if isinstance(resize, tuple) and len(resize) == 2:
