@@ -4,6 +4,7 @@ from PIL import Image
 
 def imshow(X, resize=None):
     im = None
+    print("I try")
     try:
         X = np.asarray(X)
     except (TypeError):
