@@ -12,13 +12,12 @@ def imshow(X, resize=None):
         pass
     try:
         im = Image.fromarray(X)
-        print("Im fromarray")
     except: print("Oops!  That was no valid array!")
     if im is not None:
         if isinstance(resize, tuple) and len(resize) == 2:
-            print("should show")
-            #im = im.resize(resize).show()
             return im.resize(resize)
+            print("try to show")
+            display(im)
         else: 
             #im.show()
             return im
