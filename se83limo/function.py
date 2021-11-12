@@ -4,10 +4,8 @@ from PIL import Image
 
 def imshow(X, resize=None):
     im = None
-    print("I try", type(X))
     try:
         X = np.asarray(X)
-        print(X)
     except (TypeError):
         pass
     try:
@@ -16,10 +14,9 @@ def imshow(X, resize=None):
     if im is not None:
         if isinstance(resize, tuple) and len(resize) == 2:
             return im.resize(resize)
-            print("try to show")
             display(im)
         else: 
-            #im.show()
+            display(im)
             return im
     return im
     
