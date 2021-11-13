@@ -1,7 +1,6 @@
 import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
-#from ipywidgets import interact, fixed
 
 def imshow(X, resize=None):
     im = None
@@ -14,14 +13,11 @@ def imshow(X, resize=None):
     except: print("Oops!  That was no valid array!")
     if im is not None:
         if isinstance(resize, tuple) and len(resize) == 2:
-            #display(im.resize(resize))
-            #im.resize(resize).show()
             plt.imshow(im.resize(resize))
             return im.resize(resize)
-        else: 
+        else:
+            print("no or wrong input tuble!") 
             plt.imshow(im)
-            #display(im)
-            #im.show()
             return im
     return im
     
