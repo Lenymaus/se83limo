@@ -7,4 +7,4 @@ setup(name='se83limo',
         author='Leonard Kuhn',
         author_email='leo.kuhn@fau.de',
         packages=find_packages(),
-        install_requires=['numpy', 'Pillow', 'ipywidgets'])
+        install_requires=['numpy', 'Pillow', 'ipywidgets', 'matplotlib'])
